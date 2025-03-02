@@ -7,9 +7,7 @@ export class SuperheroapiService {
 
   constructor(private readonly httpService: HttpService) { }
 
-  private URL: string = "https://www.superheroapi.com/api.php/b830637c398a7092e8870850bf56075d";
-
-  //https://www.superheroapi.com/api.php/b830637c398a7092e8870850bf56075d/search/cyclops
+  private URL: string = `https://www.superheroapi.com/api.php/${process.env.SUPERHERO_API_KEY}`;
 
   async getSearchSuperheroName(name: string) {
     const url = this.URL;

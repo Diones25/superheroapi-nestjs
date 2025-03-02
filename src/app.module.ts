@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common';
 import { SuperheroapiModule } from './superheroapi/superheroapi.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [SuperheroapiModule],
+  imports: [
+    ConfigModule.forRoot(),
+    SuperheroapiModule
+  ],
   controllers: [],
   providers: [],
 })
